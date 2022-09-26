@@ -1,0 +1,32 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.main {
+    width: 50%;
+    margin: 20px auto;
+}
+
+#mybox {
+    padding: 10px;
+    font-size: 15px;
+    background-color: rgb(235, 211, 211);
+    margin-top: 14px;
+    color: black;
+}
+
+.info {
+    width: 50%;
+    margin: 12px auto;
+}
+
+.preview {
+    background-color: rgb(235, 211, 211);
+    padding: 12px;
+    color: black;
+    text-transform: capitalize;
+    text-decoration: underline;
+    border: 2px solid black;
+    border-radius: 12px;
+}
