@@ -31,14 +31,14 @@ export default function Form(props) {
                     <h1>{props.heading}  </h1>
                     <textarea id="mybox" value={text} style={{backgroundColor : props.mode === "black" ? "gray" : 'white', color : 'white'}} onChange={handeleOnChange} cols="70" rows="10"></textarea>
                 </form>
-                <button className="btn"  onClick={handleUpClick}>Convert to upppercase</button>
-                <button className="btn" onClick={handleloClick}>Convert to Lowercase</button>
-                <button className="btn" onClick={handleClearClick}>Clear Text</button>
+                <button disabled={text.length===0} className="btn"  onClick={handleUpClick}>Convert to upppercase</button>
+                <button disabled={text.length===0} className="btn" onClick={handleloClick}>Convert to Lowercase</button>
+                <button disabled={text.length===0} className="btn" onClick={handleClearClick}>Clear Text</button>
             </div>
 
             <div className='info'  style={{color : props.mode === "black" ? "white" : "black"}}>
                 <h1>Your Text summary</h1>
-                <p>{text.split(" ").length} words and {text.length} character </p>
+                <p>{text.split(" ").filter((element)=>{return element.length !== 0 }).length} words and {text.length} character </p>
                 <p>{0.10 * text.split(" ").length} Minutes to Read</p>
                 <p className='preview' style={{backgroundColor : props.mode === "black" ? "gray" : 'white', color : 'white' , marginTop  : "12px 0px"   }}>{text}</p>
                 <h1>Preview</h1>
